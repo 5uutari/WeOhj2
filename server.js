@@ -25,7 +25,7 @@ var allowCrossDomain = function(req, res, next) {
     //res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 }
-// Otetaan käyttöön CORS säännöt:
+// Otetaan käyttöön CORS esäännöt:
 app.use(allowCrossDomain);
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,7 +36,7 @@ app.use(bodyParser.json()); //* ...jsonina
 app.use(express.static('public'));
 
 // REST API Asiakas
-app.route('/Types') // route reitittää pyynnön merkkijonon ja metodin perusteella customerControlleriin
+app.route('/Types') // route reitittää pyynnön merkkijonon ja metodin peerusteella customerControlleriin
     .get(customerController.fetchTypes);
 
 
